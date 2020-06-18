@@ -1,7 +1,10 @@
 # SampleAngular
 
 This project was generated with [Angular CLI] version 9.1.7.
-
+## Clone the project using this Link :
+   1. Command to clone the project is git clone https://github.com/Abinav007/Sample-Angular-App.git .
+   2. Install Node.js in your Local System.
+   3. After successfully cloning te project , give npm install to download to get node_modules Folder.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
