@@ -12,8 +12,8 @@ export class AppComponent {
   }
 
   title = 'sampleAngular';
-  username = "";
-  password="";
+  Firstname = "";
+  Lastname="";
   text = "";
   message="";
 
@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   Login(){
-    if(this.username === this.loginService.validUsername && this.password === this.loginService.validPassword){
+    if(this.Firstname === this.loginService.Firstname && this.Lastname === this.loginService.Lastname){
       this.message = "Hi User";
     } else {
       this.message = "Not Valid User";

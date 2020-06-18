@@ -6,6 +6,6 @@ import { Injectable } from '@angular/core';
 export class LoginService {
 
   constructor() { }
-  validUsername = "User";
-  validPassword = "Pass";
+  Firstname = "User";
+  Lastname = "Pass";
 }

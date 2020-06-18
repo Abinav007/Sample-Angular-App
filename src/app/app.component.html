@@ -14,9 +14,9 @@
 <hr>
 <p id="inputdefault">Login Form</p>
 <br>
-Username : <input type = "text" placeholder="Enter 'User' here" id="inputdefault" name="username" [(ngModel)]="username">
+Firstname : <input type = "text" placeholder="Enter 'Firstname' here" id="inputdefault" name="Firstname" [(ngModel)]="Firstname">
 <br>
-Password : <input type = "text" placeholder="Enter 'Pass' here" class= "mb-2" id="inputdefault" name="password" [(ngModel)]="password">
+Lastname : <input type = "text" placeholder="Enter 'Lastname' here" class= "mb-2" id="inputdefault" name="Lastname" [(ngModel)]="Lastname">
 <!--Add FormsModule in AppModule , To use ngModel . Don't get more into module , we will discuss it later-->
-<input type="submit"  value="Login" (click) = "Login()">
+<input type="submit"  value="Verify Me" (click) = "Login()">
 <h1>{{message}}</h1>
