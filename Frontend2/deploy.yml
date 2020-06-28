@@ -1,0 +1,33 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: fetch-service
+spec:
+  selector:
+    name: fetch-flask
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+---
+#  yaml for deployment of frontend angular app
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fetch-deployment
+spec:
+  selector:
+    matchLabels:
+      name: fetch-flask
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: fetch-flask
+    spec:
+      containers:
+      - name: fetch-flask
+        image: shyam2407/fetch:3
+        ports:
+        - containerPort: 5000
+---
