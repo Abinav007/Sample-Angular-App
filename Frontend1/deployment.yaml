@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: create-deployment
+spec:
+  selector:
+    matchLabels:
+      name: create-frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: create-frontend
+    spec:
+      containers:
+      - name: create-frontend
+        image: abinavram/sampleangular
+        ports:
+        - containerPort: 4200
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: create-service
+spec:
+  selector:
+    name: create-frontend      
+  ports:
+  - name: create-frontend-port
+    port: 4200
+    protocol: TCP
+    nodePort: 31040
+  type: LoadBalancer

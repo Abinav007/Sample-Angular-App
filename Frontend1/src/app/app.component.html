@@ -1,16 +1,3 @@
-
-<!--Initialy {{greet}} will be null while loading the page , below in the class, I have declared greet="";-->
-
-<button (click)="greet()">Press Me, To Know My Name ???</button>
-
-<!--After clicking the button ,text variable will change to "I am Angular , Web Framework based on Typescript .".--> 
-
-<p>{{text}}</p>
-
-<!--The above {{}} is called as Interpolation . Its is used to dynamic change the value based on user actions. Check the browser value gets changed-->
-<hr>
-<app-test></app-test> 
-<!--Used to call Test Component 'app-test' will declared in selector (test.component.ts).-->
 <hr>
 <p id="inputdefault">Login Form</p>
 <br>
@@ -18,5 +5,5 @@ Firstname : <input type = "text" placeholder="Enter 'Firstname' here" id="inputd
 <br>
 Lastname : <input type = "text" placeholder="Enter 'Lastname' here" class= "mb-2" id="inputdefault" name="Lastname" [(ngModel)]="Lastname">
 <!--Add FormsModule in AppModule , To use ngModel . Don't get more into module , we will discuss it later-->
-<input type="submit"  value="Verify Me" (click) = "Login()">
+<input type="submit"  value="Verify Me" (click) = "Login(Firstname , Lastname)">
 <h1>{{message}}</h1>
