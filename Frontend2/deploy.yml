@@ -10,7 +10,7 @@ spec:
   - name: fetch-flask-port
     protocol: TCP
     port: 5000
-    targetPort: 5000
+    nodePort: 31041
   type: LoadBalancer
  
 ---
