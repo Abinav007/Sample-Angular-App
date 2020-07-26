@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: fetch-flask
-        image: shyam2407/fetch:4
+        image: shyam2407/fetch:5
         ports:
         - containerPort: 5000
 ---
