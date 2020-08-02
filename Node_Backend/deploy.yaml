@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-deployment
+spec:
+  selector:
+    matchLabels:
+      name: node-backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: node-backend
+    spec:
+      containers:
+      - name: node-backend
+        image: abinavram/node_backend
+        ports:
+        - containerPort: 4200
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-service
+spec:
+  selector:
+    name: node-backend      
+  ports:
+  - name: node-backend-port
+    port: 8080
+    protocol: TCP
+  type: LoadBalancer
