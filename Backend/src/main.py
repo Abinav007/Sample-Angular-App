@@ -9,7 +9,7 @@ strings = Strings()
 
 @app.route('/health')
 def health():
-    return 'Python Flask server running on localhost:5000'
+    return 'Python Flask server running on localhost:5002'
 
 @app.route('/user', methods=['GET'])
 def getUser():
