@@ -1,8 +1,8 @@
 FROM python:alpine3.7 
-RUN mkdir -p /app
-COPY . /app
-WORKDIR /app
+RUN mkdir -p /backend
+COPY . /backend
+WORKDIR /backend
 RUN pip install -r requirements.txt 
-EXPOSE 5001 
+EXPOSE 5002
 ENTRYPOINT [ "python" ] 
-CMD [ "app.py" ] 
+CMD [ "main.py" ] 

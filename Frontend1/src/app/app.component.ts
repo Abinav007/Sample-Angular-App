@@ -28,11 +28,11 @@ export class AppComponent {
       firstName: Firstname,
       lastName: Lastname
     }
-  this.loginService.get ('localhost:5001', nameParams);    
-    // if(this.Firstname === this.loginService.Firstname && this.Lastname === this.loginService.Lastname){
-    //   this.message = "Hi User";
-    // } else {
-    //   this.message = "Not Valid User";
-    // }
+  let username= this.loginService.get ('http://backend-service', nameParams);    
+    if(this.Firstname === username.Firstname && this.Lastname === username.Lastname){
+      this.message = "Hi User";
+    } else {
+      this.message = "Not Valid User";
+    }
   }
 }

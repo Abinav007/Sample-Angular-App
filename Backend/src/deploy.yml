@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-backend
+  name: userbackend
 spec:
   selector:
     matchLabels:
-      name: flask-backend
+      name: userbackend
   replicas: 1
   template:
     metadata:
       labels:
-        name: flask-backend
+        name: userbackend
     spec:
       containers:
-      - name: flask-backend
-        image: flask_backend
+      - name: userbackend
+        image: userbackend
         imagePullPolicy: Never
         ports:
-        - containerPort: 5001
+        - containerPort: 5002
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: pythonn-service
+  name: backend-service
 spec:
   selector:
-    name: flask-backend      
+    name: userbackend      
   ports:
-  - name: flask-backend
+  - name: userbackend
     port: 5001
     protocol: TCP
   type: LoadBalancer
